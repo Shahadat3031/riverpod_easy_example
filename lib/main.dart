@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_demo/counter_provider.dart';
+import 'package:riverpod_demo/screen/change_notifier_provider/user_screen.dart';
 import 'package:riverpod_demo/screen/drop_down_example.dart';
 import 'package:riverpod_demo/screen/edit_text_example.dart';
 import 'package:riverpod_demo/screen/future_provider/our_future_provider.dart';
@@ -62,7 +63,13 @@ class HomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(builder: (context) => CounterScreen()),
               );
-            }, child: Text("State Notifier Provider"))
+            },child: Text("State Notifier Provider")),
+            ElevatedButton(onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => UserScreen()),
+              );
+            },child: Text("Change Notifier Provider")),
           ],
         ),
       ),
